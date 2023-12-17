@@ -31,14 +31,20 @@ class mainScreen extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Container(
-                            padding: EdgeInsets.all(3),
-                            decoration: BoxDecoration(
-                                color: Colors.white, shape: BoxShape.circle),
-                            child: CircleAvatar(
-                                backgroundImage: NetworkImage(
-                                    "https://pbs.twimg.com/profile_images/1684652912155275264/E6icpMUU_400x400.jpg"),
-                                radius: 25),
+                          InkWell(
+                            onTap: () {
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context, '/profile', (route) => false);
+                            },
+                            child: Container(
+                              padding: EdgeInsets.all(3),
+                              decoration: BoxDecoration(
+                                  color: Colors.white, shape: BoxShape.circle),
+                              child: CircleAvatar(
+                                  backgroundImage: NetworkImage(
+                                      "https://pbs.twimg.com/profile_images/1684652912155275264/E6icpMUU_400x400.jpg"),
+                                  radius: 25),
+                            ),
                           ),
                           SizedBox(
                             width: 10,
@@ -46,7 +52,7 @@ class mainScreen extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              welcomeMessage("Afternoon"),
+                              welcomeMessage("asdfasdfads"),
                               Text(
                                 "Muhammed Konulga",
                                 style: GoogleFonts.montserrat(
